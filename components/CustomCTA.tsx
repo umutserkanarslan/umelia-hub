@@ -55,8 +55,8 @@ export default function CustomCTA() {
             href="tel:+905316745900"
             className="flex items-center justify-center gap-[10px] bg-transparent border border-white/15 text-white/70 font-[500] text-[14px] font-plus-jakarta px-[32px] py-[14px] rounded-[10px] w-full sm:w-auto transition-all duration-[300ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-white/[0.04] hover:border-white/30 hover:text-white active:scale-[0.98]"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#EF4444" className="shrink-0">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
             Hemen Arayın
           </Link>
