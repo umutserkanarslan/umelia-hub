@@ -28,18 +28,6 @@ export default function ProductCards() {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.08 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } }
-  };
 
   return (
     <section id="solutions" className="w-full bg-navy pt-[120px] pb-[100px] px-4 md:px-6">
@@ -68,28 +56,17 @@ export default function ProductCards() {
         </motion.div>
 
         {/* Bento Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-[20px] w-full"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "80px" }}
-        >
-          {/* Large card: 3/5 columns */}
-          <motion.div variants={itemVariants} className="md:col-span-3 will-change-transform">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-[20px] w-full">
+          <div className="md:col-span-3">
             <ProductCard {...cards[0]} />
-          </motion.div>
-
-          {/* Medium card: 2/5 columns */}
-          <motion.div variants={itemVariants} className="md:col-span-2 will-change-transform">
+          </div>
+          <div className="md:col-span-2">
             <ProductCard {...cards[1]} />
-          </motion.div>
-
-          {/* Wide card: full width */}
-          <motion.div variants={itemVariants} className="md:col-span-5 will-change-transform">
+          </div>
+          <div className="md:col-span-5">
             <ProductCard {...cards[2]} size="wide" />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
       </div>
     </section>

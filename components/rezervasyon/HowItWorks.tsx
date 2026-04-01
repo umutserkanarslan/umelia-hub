@@ -77,13 +77,9 @@ export default function HowItWorks() {
         {/* Steps grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[3px] bg-[rgba(200,164,90,0.25)] rounded-[20px] overflow-hidden">
           {steps.map((step, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] }}
-              className="bg-[#F7F5F0] hover:bg-white transition-colors duration-300 p-[36px] md:p-[40px] flex flex-col will-change-transform group"
+              className="bg-[#F7F5F0] hover:bg-white transition-colors duration-300 p-[36px] md:p-[40px] flex flex-col group"
             >
               <span className="text-[80px] font-[800] leading-none text-gold/60 tracking-tighter font-plus-jakarta mb-[20px] select-none">
                 {String(i + 1).padStart(2, "0")}
@@ -97,7 +93,7 @@ export default function HowItWorks() {
               <p className="text-[#5A6A7E] text-[16px] leading-[1.7]">
                 {step.desc}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
