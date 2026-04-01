@@ -64,18 +64,18 @@ export default function HeroBrand() {
         }}
         aria-label="Çözümlere git"
       >
-        <span className="text-[#5A6A7E] text-[11px] font-plus-jakarta font-medium tracking-[0.18em] uppercase">
+        <span className="text-white/50 text-[12px] font-plus-jakarta font-semibold tracking-[0.22em] uppercase group-hover:text-white/80 transition-colors duration-300">
           Keşfet
         </span>
         <div className="flex flex-col items-center gap-[4px]">
           <motion.div
-            animate={{ y: [0, 7, 0] }}
+            animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col gap-[3px]"
+            className="flex flex-col items-center gap-[4px]"
           >
-            <div className="w-[1px] h-[20px] bg-gold opacity-20 mx-auto"></div>
-            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="text-gold opacity-50 group-hover:opacity-80 transition-opacity duration-300">
-              <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <div className="w-[1px] h-[28px] bg-gold/50 mx-auto group-hover:bg-gold/80 transition-colors duration-300"></div>
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" className="text-gold/70 group-hover:text-gold transition-colors duration-300">
+              <path d="M1 1L8 8L15 1" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </motion.div>
         </div>
