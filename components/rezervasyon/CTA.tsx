@@ -1,86 +1,90 @@
-'use client'
+"use client";
+import { motion } from "framer-motion";
 
-import { motion } from 'framer-motion'
+const trustItems = [
+  { icon: "🔒", text: "KVKK Uyumlu" },
+  { icon: "⚡", text: "3-5 Günde Hazır" },
+  { icon: "🎯", text: "14 gün ücretsiz" },
+];
+
+const WA_ICON = (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.37 0-4.557-.7-6.396-1.9l-.459-.296-2.652.889.889-2.652-.296-.459A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+  </svg>
+);
+
+const PHONE_ICON = (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+  </svg>
+);
 
 export default function CTA() {
   return (
-    <section
-      id="iletisim"
-      className="bg-navy noise-bg py-28 md:py-32 lg:py-36 relative overflow-hidden"
-    >
+    <section id="iletisim" className="noise-bg relative overflow-hidden bg-navy py-28 md:py-32 lg:py-36">
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2">
           <div className="h-[400px] w-[600px] rounded-full bg-gold/[0.06] blur-[100px]" />
         </div>
       </div>
 
-      <div className="max-w-[700px] mx-auto px-6 text-center relative z-10">
+      <div className="relative z-10 mx-auto max-w-[700px] px-6 text-center">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.3 }}
-          className="will-change-transform"
+          transition={{ duration: 0.4 }}
         >
-          <h2 className="font-[family-name:var(--font-heading)] font-bold text-white text-[34px] md:text-[42px] lg:text-[48px] leading-[1.15] mb-5 tracking-tight">
-            14 Gün Ücretsiz Deneyin,<br />
-            <span className="text-gold block mt-2 font-bold">Farkı Görün</span>
+          <h2 className="font-[family-name:var(--font-heading)] text-[32px] font-extrabold leading-[1.15] text-white md:text-[44px]">
+            14 Gün Ücretsiz Deneyin,{" "}
+            <span className="text-gold">Farkı Görün</span>
           </h2>
-          <p className="text-[#a1a1aa] text-[15px] md:text-base mb-12 leading-[1.6] max-w-[500px] mx-auto">
-            Ücretsiz demo ile sistemi test edin. Ekibiniz daha mutlu,<br className="hidden md:block"/>misafirleriniz daha memnun.
+          <p className="mx-auto mt-5 max-w-[480px] text-[15px] leading-[1.7] text-light-gray md:text-base">
+            Ücretsiz demo ile sistemi test edin. Ekibiniz daha mutlu, misafirleriniz daha memnun.
           </p>
         </motion.div>
 
-        {/* CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 will-change-transform"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.3, delay: 0.05 }}
+          transition={{ duration: 0.4, delay: 0.08 }}
+          className="mt-10 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center"
         >
           <a
             href="https://wa.me/905316745900"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 bg-[#C8A45A] text-[#111] font-[family-name:var(--font-heading)] font-semibold text-[15px] px-8 h-14 rounded-xl hover:scale-[1.02] transition-all w-full sm:w-[220px]"
+            className="inline-flex items-center justify-center gap-2.5 rounded-[10px] bg-gold px-8 py-4 text-[15px] font-bold text-navy shadow-lg transition-all duration-300 hover:scale-[1.02] hover:-translate-y-[2px] hover:shadow-[0_8px_28px_rgba(200,164,90,0.22)]"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-            </svg>
+            {WA_ICON}
             Ücretsiz Deneyin
           </a>
           <a
             href="tel:+905316745900"
-            className="flex items-center justify-center gap-2.5 border border-white/10 bg-[#161b22]/50 text-white font-[family-name:var(--font-heading)] font-semibold text-[15px] px-8 h-14 rounded-xl hover:bg-white/5 transition-all w-full sm:w-[220px]"
+            className="inline-flex items-center justify-center gap-2.5 rounded-[10px] border border-white/30 px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:border-white hover:bg-white hover:text-navy"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
+            {PHONE_ICON}
             Hemen Arayın
           </a>
         </motion.div>
 
-        {/* Trust indicators */}
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 will-change-transform"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.3, delay: 0.05 }}
+          transition={{ duration: 0.4, delay: 0.12 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-3"
         >
-          {[
-            { icon: '🔒', text: 'KVKK Uyumlu' },
-            { icon: '⚡', text: '3-5 Günde Hazır' },
-            { icon: '🎯', text: '14 gün ücretsiz' },
-          ].map((item, i) => (
-            <span key={i} className="flex items-center gap-2 text-[#a1a1aa] font-medium text-[14px] md:text-[15px]">
-              <span className="text-lg leading-none">{item.icon}</span>
-              {item.text}
-            </span>
+          {trustItems.map((item, i) => (
+            <div key={i} className="flex items-center gap-2 text-[14px] text-light-gray">
+              <span>{item.icon}</span>
+              <span>{item.text}</span>
+            </div>
           ))}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
